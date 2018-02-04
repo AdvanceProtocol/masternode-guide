@@ -179,6 +179,11 @@ And update this line based on your username. If you used `advance`, it should lo
 advance_conf=/home/advance/.advanceprotocol/advance.conf
 ```
 
+Run the test command. It must not output any error.
+```
+./venv/bin/py.test ./test
+```
+
 Add a cronjob in order to run this automatically:
 ``` 
 crontab -e
@@ -186,7 +191,6 @@ crontab -e
 Add the following line in the file. Use your username unless you used `advance` to logged in:
 ```
 * * * * * cd /home/advance/sentinel && /usr/bin/python bin/sentinel.py >/dev/null 2>&1
-./venv/bin/py.test ./test
 ```
 
 
