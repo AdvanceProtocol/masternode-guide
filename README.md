@@ -167,7 +167,7 @@ The last step is to run the sentinel script in the background.
 ```
 cd ~ && git clone https://github.com/advanceprotocol/sentinel.git && cd sentinel
 virtualenv ./venv
-pip install -r requirements.txt
+./venv/bin/pip install -r requirements.txt
 ```
 
 Edit the sentinet config file:
@@ -190,7 +190,7 @@ crontab -e
 ```
 Add the following line in the file. Use your username unless you used `advance` to logged in:
 ```
-* * * * * cd /home/advance/sentinel && /usr/bin/python bin/sentinel.py >/dev/null 2>&1
+* * * * * cd /home/advance/sentinel && ./venv/bin/python bin/sentinel.py >/dev/null 2>&1
 ```
 
 
